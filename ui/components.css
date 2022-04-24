@@ -1,0 +1,33 @@
+.main_box {
+	height: 500px;
+	width: 350px;
+	position: absolute;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	top: 10%;
+	left: 35%;
+}
+.selection_box {
+	height: 100%;
+	width: 200px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	position: absolute;
+	top: 50px;
+	left: 0%;
+}
+.component_button {
+	width: 200px;
+	height: 40px;
+	border: none;
+	border-bottom: 1px solid#bbb;
+	margin: 0px;
+	background-color: white;
+	font-size: 17px;
+}
+.list_box {
+	height: 100%;
+	width: 200px;
+	position: absolute;
+	top: 50px;
+	right: 0%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

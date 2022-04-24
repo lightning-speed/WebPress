@@ -1,0 +1,49 @@
+<html>
+	<title>WebPress</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link
+		href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+		rel="stylesheet"
+	/>
+	<link rel="stylesheet" href="ui/default.css" />
+	<link rel="stylesheet" href="ui/components.css" />
+	<script src="script/app.js"></script>
+
+	<body onload="startApp()">
+		<div class="main_box" id="component_box"></div>
+		<div class="list_box" id="component_list_box"></div>
+		<p
+			style="
+				margin: 10px;
+				padding: 7px;
+				text-align: center;
+				width: 200px;
+				float: right;
+			"
+		>
+			Component List
+		</p>
+		<p
+			style="
+				margin: 10px;
+				padding: 7px;
+				text-align: center;
+				width: 200px;
+				float: left;
+			"
+		>
+			Add Component
+		</p>
+
+		<div class="selection_box">
+			<button class="component_button" onclick="select_component(1);">
+				Button
+			</button>
+			<button class="component_button" onclick="select_component(2);">
+				Label
+			</button>
+		</div>
+	</body>
+</html>
