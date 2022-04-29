@@ -22,7 +22,24 @@ function select_component(id) {
 		case 3: {
 			selectedComponent = document.createElement("IMG");
 			selectedComponent.id = "image";
-			selectedComponent.src = "none";
+			selectedComponent.src = "../assets/images/image.png";
+	
+			break;
+		}
+		case 4: {
+			selectedComponent = document.createElement("DIV");
+			selectedComponent.innerHTML = "Div";
+			selectedComponent.id = "div";
+			break;
+		}
+		case 5: {
+			selectedComponent = document.createElement("HR");
+			selectedComponent.id = "hr";
+			break;
+		}
+		case 6: {
+			selectedComponent = document.createElement("INPUT");
+			selectedComponent.id = "input";
 			break;
 		}
 		default: { break; };
@@ -69,6 +86,8 @@ function open_property(list_component) {
 	value_box.value = selectedComponent.value;
 	font_size_box.value = selectedComponent.style.fontSize;
 	font_box.value = selectedComponent.style.fontFamily;
+	type_box.value = selectedComponent.type;
+
 	var fields = document.getElementById("editBox").children;
 	for (var i = 0; i < fields.length; i++) {
 		if (fields[i].value == "undefined") {
@@ -102,6 +121,8 @@ function save() {
 	selectedComponent.style.fontSize = font_size_box.value;
 	if (font_box.value != "")
 		selectedComponent.style.fontFamily = font_box.value;
+	selectedComponent.type = type_box.value;
+
 
 }
 function removeCom() {
@@ -110,6 +131,8 @@ function removeCom() {
 		document.getElementById(list.innerHTML).remove();
 	} catch (e) { }
 	list.remove();
+	var lists = document.getElementById("component_list_box").children;
+	open_property(lists[lists.length-1]);
 }
 function phpCall(url) {
 	var request = new XMLHttpRequest();
@@ -118,4 +141,5 @@ function phpCall(url) {
 	}
 	request.open("GET", url, true);
 	request.send();
+	
 }
