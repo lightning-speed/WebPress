@@ -23,7 +23,7 @@ function select_component(id) {
 			selectedComponent = document.createElement("IMG");
 			selectedComponent.id = "image";
 			selectedComponent.src = "../assets/images/image.png";
-	
+
 			break;
 		}
 		case 4: {
@@ -132,7 +132,13 @@ function removeCom() {
 	} catch (e) { }
 	list.remove();
 	var lists = document.getElementById("component_list_box").children;
-	open_property(lists[lists.length-1]);
+	open_property(lists[lists.length - 1]);
+}
+function copyCom() {
+	var newc = selectedComponent.cloneNode(true);
+	newc.id += "c";
+	component_box.appendChild(newc);
+	addComponentInList(newc);
 }
 function phpCall(url) {
 	var request = new XMLHttpRequest();
@@ -141,5 +147,24 @@ function phpCall(url) {
 	}
 	request.open("GET", url, true);
 	request.send();
-	
+
+}
+
+function m() {
+	if (document.body.offsetHeight > document.body.offsetWidth) {
+		navBar.style.display = "none";
+		mobBar.offsetHeight += 60;
+	}
+	else {
+		mobBar.style.display = "none";
+		menuButton.style.display = "none";
+	}
+}
+function menu() {
+	if (mobBar.style.top != "-100%") {
+		mobBar.style.top = "-100%";
+	}
+	else {
+		mobBar.style.top = "0%";
+	}
 }

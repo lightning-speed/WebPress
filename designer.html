@@ -4,6 +4,7 @@
 <head>
 	<title>Web Press</title>
 	<link rel="icon" type="image/x-icon" href="assets/images/icon.png">
+
 </head>
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,15 +19,27 @@
 </div>
 
 <body onload="startApp()" class="bodt">
-	<div class="nav_bar">
-		<span><button class="nav_button" style="position: absolute;top:10px;left: 20px;color:blueviolet;font-weight: bold;font-size:20px;">Web Press</button></span>
-		<span><button class="nav_button">Home</button></span>
-		<span><button class="nav_button">Documentation</button></span>
-		<span><button class="nav_button">About us</button></span>
-		<span><button class="nav_button">Help</button></span>
-		<button class="c_button" style="float:right;">Export {}</button>
-
-	</div>
+		<span><button class="nav_button" style="position: absolute;top:10px;left: 20px;color:blueviolet;font-weight: bold;font-size:20px;z-index:2;">Web Press</button></span>
+		<span><button class="nav_button" id="menuButton" style="position: absolute;top:-5px;right: 20px;font-weight: bold;font-size:35px;z-index:2;" onclick="menu();">☰</button></span>
+   
+	<div class="nav_bar" id="navBar">
+		<span><button class="nav_button" onclick="window.open('index.html','_self')">Home</button></span>
+		<span><button class="nav_button" onclick="window.open('designer.html','_self')">Designer</button></span>
+		<span><button class="nav_button" onclick="window.open('about_me.html','_self')">About me</button></span>
+		<span><button class="nav_button" onclick="window.open('contribute.html','_self')">Contribute</button></span>
+		
+   </div>
+	 <div class="mob_bar" id="mobBar">
+		<br><span><button class="nav_button" onclick="window.open('index.html','_self')">Home</button></span>
+		<br><span><button class="nav_button" onclick="window.open('designer.html','_self')">Designer</button></span>
+		<br><span><button class="nav_button" onclick="window.open('about_me.html','_self')">About me</button></span>
+		<br><span><button class="nav_button" onclick="window.open('contribute.html','_self')">Contribute</button></span>
+		
+   </div>
+	 <script>
+		 m();
+	
+	 </script>
 	<div class="main_box" id="component_box"></div>
 	<div class="list_box" id="component_list_box"></div>
 	<p style="
@@ -80,6 +93,8 @@
 	</div>
 	<div class="edit_box" id="editBox">
 		<button class="component_button" onclick="removeCom();">Remove</button>
+		<button class="component_button" onclick="copyCom();">Copy Component</button>
+
 		<input class="text_field" placeholder="ID" id="id_box" />
 		<input class="text_field" placeholder="Class" id="class_box" />
 		<input class="text_field" placeholder="Width" id="width_box" />
