@@ -58,7 +58,7 @@
 }
 .c_button {
 	border: none;
-	border-radius: 25px;
+	border-radius: 23px;
 	outline: none;
 	color: white;
 	background-color: rgba(0, 132, 255, 0.8);
@@ -116,4 +116,16 @@
 	font-weight: bold;
 	resize: none;
 	border-radius: 5px;
+}
+.r_button {
+	background-image: linear-gradient(
+		to right,
+		rgba(81, 11, 138, 0.707),
+		rgba(11, 66, 138, 0.707)
+	);
+	border: none;
+	padding: 10px;
+	margin: 0;
+	color: white;
+	width: 100%;
 }

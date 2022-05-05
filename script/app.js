@@ -3,8 +3,12 @@ var selectedComponentList;
 var php_output;
 var ci = 0;
 function startApp() {
+		if (document.body.offsetHeight > document.body.offsetWidth) {
+			window.open("no.html","_self");
+	}
 	document.body.scrollTop = 0;
 	setInterval(save, 1000);
+
 }
 function select_component(id) {
 	switch (id) {
@@ -168,4 +172,8 @@ function menu() {
 	else {
 		mobBar.style.top = "0%";
 	}
+}
+function copyCode() {
+	navigator.clipboard.writeText(component_box.innerHTML);
+	alert("Code Copied");
 }
