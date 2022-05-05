@@ -1,6 +1,7 @@
 var selectedComponent;
 var selectedComponentList;
 var php_output;
+var ci = 0;
 function startApp() {
 	document.body.scrollTop = 0;
 	setInterval(save, 1000);
@@ -44,8 +45,8 @@ function select_component(id) {
 		}
 		default: { break; };
 	}
-	selectedComponent.id += parseInt(Math.random() * 100000 % 100000);
-
+	selectedComponent.id += ci;
+	ci++;
 	component_box.appendChild(selectedComponent);
 
 	addComponentInList(selectedComponent);
